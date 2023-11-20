@@ -1,0 +1,32 @@
+collections:
+  staff_members:
+    # people: true # define collection as hash-map
+    output: true # rendered page for every staff member
+
+
+# define layouts for specific pages/collections/etc.
+defaults:
+  - scope:
+      path: ""
+      type: "staff_members"
+    values:
+      layout: "staff_member"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# pagination
+paginate: 2
+paginate_path: "/blog/page:num/"
