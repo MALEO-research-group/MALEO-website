@@ -3,10 +3,10 @@ identifier: jbossek
 short_name: Jakob
 name: Jakob Bossek
 academic_title: Dr.
-position: Assistant Professor (Akademischer Rat)
+position: Akademischer Rat
 email: jakob.bossek@uni-paderborn.de
 phone: +49 241 80 21453
-order: 1
+order: 2
 external_links:
   - website:
     name: website

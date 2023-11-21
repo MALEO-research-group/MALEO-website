@@ -6,9 +6,10 @@ title: Homepage of the Machine Learning and Optimisation (MALEO) Group at Paderb
 
 <ul>
 {% for staff_member in site.staff_members %}
-	<li>
-		<a href="{{ staff_member.url }}">{{ staff_member.academic_title }} {{ staff_member.name }}</a>
-		<p>{{ staff_member.content | markdownify }}
-	</li>
+    <li>
+        <img src="/assets/images/{{ staff_member.identifier }}.jpg" width=10%>
+        <a href="{{ staff_member.url }}" title="Open staff member page">{{ staff_member.academic_title }} {{ staff_member.name }}</a>
+        <p>{{ staff_member.content | markdownify }}
+    </li>
 {% endfor %}
 </ul>
