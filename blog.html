@@ -1,37 +1,41 @@
 ---
 layout: default
 title: Blog of the Machine Learning and Optimisation (MALEO) Group at Paderborn University
+pagination:
+  enabled: true
 ---
 
-<ul>
-	{% for post in site.posts %}
-	<li>
-		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-		{% assign staff_member = site.staff_members | where: 'identifier', post.author | first %}
-		{% if staff_member %}
-		<b>Posted by <a href="{{ staff_member.url }}">{{ staff_member.identifier }}</a></b>
-		{% endif %}
-		{{ post.excerpt }}
-	</li>
-	{% endfor %}
-</ul>
+<div id="news">
+  <h1>MALEO Blog</h1>
+  <div class="separator"></div>
 
+  {% for post in paginator.posts %}
+  <article>
+  	<h2>{{ post.title }}</h2>
+  	{% assign staff_member = site.staff_members | where: 'identifier', post.author | first %}
+  	{% if staff_member %}
+  	<b>Posted by <a class="link_button" href="{{ staff_member.url }}">{{ staff_member.name }}</a></b>
+  	{% endif %}
+  	{{ post.excerpt }}
+    <a class="link_button" href="{{ post.url }}">Read more </a>
+  </article>
+  {% endfor %}
 
-<!-- Pagination links -->
-<!--div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path }}" class="previous">
-      Previous
-    </a>
-  {% else %}
-    <span class="previous">Previous</span>
+  <!-- Pagination links -->
+  <div class="pagination">
+  {% if paginator.total_pages > 1 %}
+  <ul>
+    {% if paginator.previous_page %}
+    <li>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+    </li>
+    {% endif %}
+  </ul>
   {% endif %}
-  <span class="page_number ">
-    Page: {{ paginator.page }} of {{ paginator.total_pages }}
-  </span>
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div-->
+  </div>
+</div>

@@ -1,4 +1,349 @@
-.active {
-	color: red;
+// :root {
+//   /* RWTH primary color */
+//   --rwth-blue-100: rgb(0,84,159);
+//   --rwth-blue-75: rgb(64,127,183);
+//   --rwth-blue-50: rgb(142,186,229);
+//   --rwth-blue-25: rgb(199,221,242);
+//   --rwth-blue-10: rgb(232,241,250);
+// }
+
+// /* COLOR VARIABLES */
+// $main-font-color: var(--rwth-blue-75) !default;
+// /* background of highlight boxes (e.g., mainly the "teaser" box at the top of the homepage) */
+// $background-color-highlight-strong: var(--rwth-blue-100) !default;
+// /* light gray background */
+// $background-color-highlight-light: var(--rwth-black-10) !default;
+// /* add headers h{1,...,4} */
+// $headline-color: var(--rwth-blue-100) !default;
+// /* links in main sections */
+// $link-color: var(--rwth-blue-75) !default;
+// $link-hover-color: var(--rwth-blue-100) !default;
+// /* currently active link */
+// $link-active-color: var(--link-hover-color) !default;
+// $refer-color: var(--rwth-black-50) !default;
+// /* special colors */
+// $alert-color: var(--rwth-red-100) !default;
+
+
+$maleo-violet-dark: rgb(102, 69, 147);
+$maleo-violet-very-dark: rgb(68, 12, 169);
+$maleo-violet-light: rgb(170, 64, 142);
+$maleo-pink: rgb(224, 68, 136);
+$maleo-violet-reduced: rgb(38, 60, 145);
+$black: #000;
+
+// Note: basic CSS reset is done in _sass/reset.scss
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	position: relative;
+}
+
+basic styles
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+	hyphens: auto;
+	margin-bottom: 16px;
+	padding-bottom: 3px;
+}
+
+ul {
+	list-style-type: circle;
+	list-style-position: outside;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2.2rem;
+	line-height: 2.3rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 2rem;
+}
+
+p {
+	margin: 5px 0 20px 0;
+}
+
+blockquote {
+	font-style: italic;
+	font-weight: 500;
+	font-size: 1.5rem;
+	line-height: 1.7rem;
+	color: white;
+	quotes: "\201C""\201D""\2018""\2019";
+	margin-bottom: 25px;
+}
+
+blockquote:before {
+  color: white;
+  content: open-quote;
+  // font-size: 4em;
+  // line-height: 0.1em;
+  // margin-right: 0.25em;
+  // vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: white;
+  content: close-quote;
+  // font-size: 4em;
+  // line-height: 0.1em;
+  // margin-left: 0.25em;
+  // vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+}
+
+b {
+	font-weight: 500;
+}
+
+i {
+	font-style: italic;
+}
+
+abbr {
+	border-bottom: 1px dotted white;
+	cursor: help;
+}
+
+figure {
+	text-align: center;
+	display: block;
+	margin-bottom: 25px;
+}
+
+figure img {
+	display: block;
+	margin: 0 auto;
+}
+
+caption {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
+
+.separator {
+	display: block;
+	width: 5rem;
+	height: 0.25rem;
+	background-color: #efefef;
+	margin: 25px 0 35px;
+}
+
+#logo {
+	margin: 0 6px 25px 0 !important;
+}
+
+#main_nav ul {
+	list-style-type: none;
+}
+
+#we_are_hiring {
+	display: none;
+	color: white;
+	background: rgba($maleo-violet-dark, 1);
+	border-radius: 5px;
+	border: 1px solid $maleo-violet-dark;
+	padding: 10px;
+}
+
+#content a:link,
+#content a:visited,
+#content a:active {
+	color: rgba(white, 0.75);
+	text-decoration: none;
+	font-weight: 500;
+	border-bottom: 1px solid rgba(white, 0.75);
+	transition: 0.3s;
+}
+
+#content a:focus,
+#content a:hover {
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+a.link_button:link,
+a.link_button:visited,
+a.link_button:active {
+	color: white !important;
+	display: inline-block;
+	padding: 1px 5px;
+	border-radius: 3px;
+	border: 0 !important;
+	color: #white;
+	text-decoration: none;
+	background-color: $maleo-violet-light;
+	box-shadow: 3px 3px 0px rgba($black, 0.25);
+}
+
+a.link_button:focus,
+a.link_button:hover {
+	background-color: $maleo-violet-light;
+	box-shadow: 2px 2px 0px rgba($black, 0.25);
+}
+
+#main_nav {
+	margin-bottom: 2rem;
+}
+
+#main_nav a:link,
+#main_nav a:visited,
+#main_nav a:active {
+	font-size: 1.4rem;
+	line-height: 1.5rem;
+	color: $maleo-violet-light;
+	text-decoration: none;
+	display: inline-block;
+	padding: 3px 6px;
+	border-right: 3px solid transparent;
+}
+
+#main_nav a:focus,
+#main_nav a:hover,
+#main_nav a.active {
+	color: $maleo-violet-dark;
+	border-right-color: $maleo-violet-dark;
+}
+
+#main_nav a.active {
 	font-weight: bold;
+}
+
+#main_nav li:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+#staff {
+	list-style-type: none;
+}
+
+#staff img {
+	border-radius: 100px;
+	display: block;
+	margin-bottom: 12px;
+}
+
+#staff_filter {
+	margin-bottom: 3rem;
+}
+
+#news article {
+	margin-bottom: 3.5rem;
+}
+
+input {
+    -webkit-user-select: none; /* Chrome, Opera, Safari */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none; /* Standard syntax */
+}
+
+input[type=text] {
+	display: block;
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: transparent;
+	border-radius: 0;
+	box-sizing: border-box;
+	color: #afafaf;
+	outline: none;
+}
+
+input[type=text]:focus {
+	background-color: white;
+	border-color: rgba(255, 255, 255, 1);
+	outline: none;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0;
+	position: relative;
+	width: 100%;
+}
+
+.column {
+	padding: 4rem;
+	background-color: $maleo-violet-dark;
+	min-height: 100vh;
+}
+
+#sidebar {
+	background-color: white;
+	padding-left: 20%;
+	text-align: right;
+	position: relative;
+	display: block;
+}
+
+#sidebar > div {
+	position: fixed;
+	right: calc(50% + 4rem);
+}
+
+#content {
+	padding-right: 20%;
+	padding-top: 4.1rem;
+	color: #efefef;
+}
+
+#tooltip {
+	color: white;
+	font-size: 0.7rem;
+	background-color: $maleo-violet-reduced;
+	padding: 1rem 1.5rem;
+	box-shadow: 5px 5px 0px rgba($black, 0.25);
+}
+
+@media (max-width: 1500px) {
+	// no distance anymore
+	#sidebar {
+		padding: 4rem;
+	}
+
+	#content {
+		padding-right: 4rem;
+	}
+}
+
+@media (max-width: 1024px) {
+	.column {
+		min-height: 10px; // small dummy value
+	}
+
+	#sidebar {
+		padding-top: 0.2rem;
+		text-align: center;
+	}
+
+	.container {
+		grid-template-columns: 1fr;
+	}
 }

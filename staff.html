@@ -1,0 +1,22 @@
+---
+layout: default
+title: Staff members of the Machine Learning and Optimisation (MALEO) Group at Paderborn University
+---
+
+<h1>MALEO Staff Members</h1>
+<div class="separator"></div>
+
+<div id="staff_filter">
+    <label for="staff_name" class="hide">Search by name</label>
+    <input type="text" id="staff_search" name="staff_search" value="Search by name">
+</div>
+
+<ul id="staff">
+{% for staff_member in site.staff_members %}
+    <li>
+        <img src="/assets/images/{{ staff_member.identifier }}.jpg" width="15%" />
+        <a class="link_button" href="{{ staff_member.url }}" title="Open staff member page">{{ staff_member.academic_title }} {{ staff_member.name }}</a>
+        <p>{{ staff_member.content | markdownify }}
+    </li>
+{% endfor %}
+</ul>
