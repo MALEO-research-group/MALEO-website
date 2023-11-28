@@ -2,7 +2,6 @@
 identifier: mhucke
 short_name: Marion
 name: Marion Hucke
-academic_title: Prof. Dr.
 position: Assistant
 email: marion.hucke@uni-paderborn.de
 phone: +49 5251 60-6695
