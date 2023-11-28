@@ -8,7 +8,7 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
 
 <div id="staff_filter">
     <label for="staff_name" class="hide">Search by name</label>
-    <input type="text" id="staff_search" name="staff_search" value="Search by name">
+    <input type="search" id="staff_search" name="staff_search" value="Search by name">
 </div>
 
 <ul id="staff">
@@ -16,7 +16,14 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
     <li>
         <img src="/assets/images/{{ staff_member.identifier }}.jpg" width="15%" />
         <a class="link_button" href="{{ staff_member.url }}" title="Open staff member page">{{ staff_member.academic_title }} {{ staff_member.name }}</a>
-        <p>{{ staff_member.content | markdownify }}
+        {{ staff_member.content | markdownify }}
+        {% if staff_member.external_links %}
+            <!-- <p> -->
+            {% for ext_link in staff_member.external_links %}
+                <a href={{ ext_link.url }} class="external">{{ ext_link.name }}</a>
+            {% endfor %}
+            <!-- </p> -->
+        {% endif %}
     </li>
 {% endfor %}
 </ul>

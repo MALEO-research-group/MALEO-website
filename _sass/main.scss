@@ -42,9 +42,9 @@ body {
 	position: relative;
 }
 
-basic styles
+// basic styles
 img, picture, video, canvas, svg {
-	display: block;
+	// display: block;
 	max-width: 100%;
 }
 
@@ -55,7 +55,7 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
 	overflow-wrap: break-word;
 	hyphens: auto;
-	margin-bottom: 16px;
+	margin-bottom: 12px;
 	padding-bottom: 3px;
 }
 
@@ -95,19 +95,11 @@ blockquote {
 blockquote:before {
   color: white;
   content: open-quote;
-  // font-size: 4em;
-  // line-height: 0.1em;
-  // margin-right: 0.25em;
-  // vertical-align: -0.4em;
 }
 
 blockquote:after {
   color: white;
   content: close-quote;
-  // font-size: 4em;
-  // line-height: 0.1em;
-  // margin-left: 0.25em;
-  // vertical-align: -0.4em;
 }
 
 blockquote p {
@@ -135,10 +127,17 @@ figure {
 
 figure img {
 	display: block;
-	margin: 0 auto;
+	border: 5px solid white;
+	margin: 0 auto 7px;
 }
 
-caption {
+figure#maleo_bird img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+figure caption {
+	margin-top: 6px;
 	display: block;
 }
 
@@ -151,11 +150,34 @@ caption {
 	width: 5rem;
 	height: 0.25rem;
 	background-color: #efefef;
-	margin: 25px 0 35px;
+	margin: 0px 0 35px;
 }
 
 #logo {
 	margin: 0 6px 25px 0 !important;
+}
+
+aside.ribbon_banner {
+   display: block;
+   position: fixed;
+   top: 50px;
+   left: -120px;
+   width: 400px;
+   height: 50px;
+   line-height: 50px;
+   text-align: center;
+   opacity: 0.7;
+   transform: rotate(-45deg);
+   font-size: 1.5rem;
+   font-weight: 500 !important;
+   color: rgb(255, 255, 255) !important;
+   background-color: $maleo-violet-dark;
+   z-index: 500;
+   transition: 0.3s;
+}
+
+aside.ribbon_banner:hover {
+	opacity: 1;
 }
 
 #main_nav ul {
@@ -163,11 +185,11 @@ caption {
 }
 
 #we_are_hiring {
-	display: none;
-	color: white;
-	background: rgba($maleo-violet-dark, 1);
-	border-radius: 5px;
-	border: 1px solid $maleo-violet-dark;
+	// display: none;
+	// color: white;
+	// background: rgba($maleo-violet-dark, 1);
+	// border-radius: 5px;
+	// border: 1px solid $maleo-violet-dark;
 	padding: 10px;
 }
 
@@ -219,7 +241,7 @@ a.link_button:hover {
 	color: $maleo-violet-light;
 	text-decoration: none;
 	display: inline-block;
-	padding: 3px 6px;
+	padding: 5px 6px 5px 12px;
 	border-right: 3px solid transparent;
 }
 
@@ -232,14 +254,23 @@ a.link_button:hover {
 
 #main_nav a.active {
 	font-weight: bold;
+	background-color: rgba($maleo-violet-dark, 0.1);
+	// border-radius: 10px 0 0 10px;
 }
 
 #main_nav li:not(:last-child) {
 	margin-bottom: 1rem;
 }
 
-#staff {
+#content #staff {
 	list-style-type: none;
+	margin-left: 0;
+}
+
+#staff li {
+	position: relative;
+	margin-bottom: 30px;
+	max-width: 100%;
 }
 
 #staff img {
@@ -248,12 +279,23 @@ a.link_button:hover {
 	margin-bottom: 12px;
 }
 
+#staff a.link_button {
+	position: absolute;
+	top: 7.5%;
+	left: 14%;
+}
+
 #staff_filter {
 	margin-bottom: 3rem;
 }
 
-#news article {
+article {
 	margin-bottom: 3.5rem;
+}
+
+#content .bibliography {
+	list-style-type: none;
+	margin-left: 0;
 }
 
 input {
@@ -263,19 +305,21 @@ input {
     user-select: none; /* Standard syntax */
 }
 
-input[type=text] {
+input[type=search] {
 	display: block;
 	width: 100%;
-	padding: 10px 15px;
+	padding: 10px 15px 10px 50px;
+
 	border: 1px solid rgba(255, 255, 255, 0.2);
-	background: transparent;
+	background: no-repeat 3% 50%/4% url("/assets/images/icons/magnifier.png") transparent;
 	border-radius: 0;
+	opacity: 0.5;
 	box-sizing: border-box;
 	color: #afafaf;
 	outline: none;
 }
 
-input[type=text]:focus {
+input[type=search]:focus {
 	background-color: white;
 	border-color: rgba(255, 255, 255, 1);
 	outline: none;
@@ -314,11 +358,16 @@ input[type=text]:focus {
 	color: #efefef;
 }
 
+#content ul,
+#content ol {
+	margin-left: 1.3rem;
+}
+
 #tooltip {
 	color: white;
-	font-size: 0.7rem;
+	font-size: 0.85rem;
 	background-color: $maleo-violet-reduced;
-	padding: 1rem 1.5rem;
+	padding: 0.6rem 1.2rem;
 	box-shadow: 5px 5px 0px rgba($black, 0.25);
 }
 
