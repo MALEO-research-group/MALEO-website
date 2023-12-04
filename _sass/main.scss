@@ -82,6 +82,35 @@ p {
 	margin: 5px 0 20px 0;
 }
 
+#quick_access {
+	margin-bottom: 1.5rem;
+}
+
+#quick_access ul {
+	list-style-type: none;
+	margin-left: 0 !important;
+}
+
+#quick_access li:before {
+	content: '\21AC';
+	margin-right: 5px;
+	transition: 0.3s;
+}
+
+#quick_access li:hover:before {
+	content: '\21AC';
+	margin-right: 10px;
+}
+
+
+.highlight {
+	padding: 1rem;
+	border-radius: 10px;
+	background: #efefef;
+	color: $maleo-violet-dark;
+	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
 blockquote {
 	font-style: italic;
 	font-weight: 500;
@@ -157,7 +186,7 @@ figure caption {
 	margin: 0 6px 25px 0 !important;
 }
 
-aside.ribbon_banner {
+.ribbon_banner {
    display: block;
    position: fixed;
    top: 50px;
@@ -176,8 +205,24 @@ aside.ribbon_banner {
    transition: 0.3s;
 }
 
-aside.ribbon_banner:hover {
+.ribbon_banner:hover {
 	opacity: 1;
+}
+
+#color_theme_switch {
+	display: block;
+	width: 22px;
+	height: 22px;
+	border-radius: 11px;
+	position: fixed;
+	top: 1.5rem;
+	left: 50%;
+	margin-left: -11px;
+    text-indent: -9999px;
+	overflow: hidden;
+	background: linear-gradient(to right, $maleo-violet-dark 50%, white 50%);
+    background-color: red;
+	z-index: 9999;
 }
 
 #main_nav ul {
@@ -207,6 +252,11 @@ aside.ribbon_banner:hover {
 #content a:hover {
 	color: white;
 	border-bottom: 1px solid white;
+}
+
+#content a.external:after {
+	content: '\21AC';
+	padding-left: 5px;
 }
 
 a.link_button:link,
@@ -279,11 +329,11 @@ a.link_button:hover {
 	margin-bottom: 12px;
 }
 
-#staff a.link_button {
-	position: absolute;
-	top: 7.5%;
-	left: 14%;
-}
+// #staff a.link_button {
+// 	position: absolute;
+// 	top: 7.5%;
+// 	left: 14%;
+// }
 
 #staff_filter {
 	margin-bottom: 3rem;
@@ -296,6 +346,10 @@ article {
 #content .bibliography {
 	list-style-type: none;
 	margin-left: 0;
+}
+
+#content .bibliography li {
+	margin-bottom: 1rem;
 }
 
 input {
@@ -387,12 +441,49 @@ input[type=search]:focus {
 		min-height: 10px; // small dummy value
 	}
 
-	#sidebar {
-		padding-top: 0.2rem;
-		text-align: center;
-	}
-
 	.container {
 		grid-template-columns: 1fr;
+	}
+
+	.ribbon_banner {
+		display: none;
+	}
+
+	#sidebar {
+		box-sizing: border-box; // TODO: border-box for ALL elements!
+		position: fixed;
+		height: 100px;
+		width: 100%;
+		padding: 18px 1rem;
+		margin: 0;
+		z-index: 1000;
+		overflow: hidden;
+		text-align: left;
+		box-shadow: 0px 5px 0px 	rgba(0, 0, 0, 0.3);
+	}
+
+	#sidebar > div {
+		position: static;
+	}
+
+	#content {
+		padding: 140px 1rem 3rem;
+	}
+
+	#sidebar nav {
+		opacity: 0;
+		width: 100%;
+		text-align: right;
+
+	}
+
+	#sidebar:hover {
+		height: 100%;
+		opacity: 1;
+		transition: 0.2s;
+	}
+
+	#sidebar:hover nav {
+		opacity: 1;
 	}
 }

@@ -1,0 +1,16 @@
+---
+---
+{{ reference }}
+
+  <ul class="bibliography-meta">
+    {% if link %}
+      <li><a href="{{link}}">Download</a></li>
+    {% endif %}
+    {% if entry.url %}
+      {% if entry.url contains "https://arxiv.org/abs/" %}
+      <li><a href="{{entry.url}}" class="external" title="External link: preprint at arxiv">Preprint</a></li>
+      {% else %}
+      <li><a href="{{entry.url}}" class="external" title="External link: paper at publisher website">Final version</a></li>
+      {% endif %}
+    {% endif %}
+  </ul>

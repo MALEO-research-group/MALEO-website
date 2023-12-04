@@ -1,0 +1,10 @@
+{% assign post = site.posts.first %}
+<article>
+<h3>{{ post.title }}</h3>
+{% assign staff_member = site.staff_members | where: 'identifier', post.author | first %}
+{% if staff_member %}
+<b>Posted by <a href="{{ staff_member.url }}">{{ staff_member.name }}</a></b>
+{% endif %}
+{{ post.excerpt }}
+<a href="{{ post.url }}">Read more </a>
+</article>

@@ -42,6 +42,19 @@ $(document).ready(function() {
     });
   });
 
+  // build quick-jump menu
+  var hs = $("#content h2");
+  if (hs.length > 1) {
+    var qa = '<nav><b>Quick access:</b> <ul>';
+    hs.each(function(index) {
+      qa = qa + '<li><a href="#h' + index + '">' + $(this).text() + '</a></li>';
+      $(this).attr('id', 'h' + index);
+    });
+    qa = qa + '</ul></nav>';
+    // alert(qa);
+    $("#quick_access").append(qa);
+  }
+
   /* Toggle mobile menu */
   // const toggle = document.querySelector(".toggle");
   // const menu = document.querySelector("#menu");

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Homepage of the Machine Learning and Optimisation (MALEO) Group at Paderborn University
+title: Publications - Machine Learning and Optimisation (MALEO) Group at Paderborn University
 ---
 
 <h1>MALEO Publications</h1>
@@ -11,19 +11,22 @@ title: Homepage of the Machine Learning and Optimisation (MALEO) Group at Paderb
     <input type="search" id="staff_search" name="staff_search" value="Search by name">
 </div>
 
-<h2>2023</h2>
+<h2>Journal Aricles (peer-reviewed)</h2> <!--span class="gray">[{% bibliography_count -f bib --query @article[journal!=CoRR] %}]</span></h2-->
 <div class="separator"></div>
 
-<ul class="bibliography">
-    <li><p id="bossek_single-objective_2023">J. Bossek and C. Grimme, “On Single-Objective Sub-Graph-Based Mutation for Solving the Bi-Objective Minimum Spanning Tree Problem,” <i>Evolutionary Computation</i>, 2023. </p></li>
-    <li><p id="heins_study_2023">J. Heins, J. Bossek, J. Pohl, M. Seiler, H. Trautmann, and P. Kerschke, “A Study on the Effects of Normalized TSP Features for Automated Algorithm Selection,” <i>Theoretical Computer Science</i>, vol. 940, pp. 123–145, 2023. </p></li>
-</ul>
+{% bibliography --file bib --query @article[journal!=CoRR] %}
 
-<h2>2022</h2>
+<h2>Conference Articles (peer-reviewed)</h2> <!--span class="gray">[{% bibliography_count -f bib --query @inproceedings %}]</span></h2-->
 <div class="separator"></div>
 
-<ul class="bibliography">
-    <li><p id="bossek_additional_2023">J. Bossek and D. Sudholt, “Do Additional Target Points Speed Up Evolutionary Algorithms?,” <i>Theoretical Computer Science</i>, p. 113757, 2023. </p></li>
-    <li><p id="clever_process-oriented_2022">L. Clever, J. S. Pohl, J. Bossek, P. Kerschke, and H. Trautmann, “Process-Oriented Stream Classification Pipeline: A Literature Review,” <i>Applied Sciences</i>, vol. 12, no. 18, p. 9094, 2022. </p></li>
-</ul>
+{% bibliography --file bib --query @inproceedings %}
+
+<h2>Books</h2> <!--span class="gray">[{% bibliography_count -f bib --query @book %}]</span></h2-->
+<div class="separator"></div>
+
+{% bibliography --file bib --query @book %}
+
+<h2>Technical Reports &amp; Preprints</h2> <!--span class="gray">[{% bibliography_count -f bib --query @article[journal=CoRR] %}]</span></h2-->
+
+{% bibliography --file bib --query @article[journal=CoRR] %}
 

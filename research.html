@@ -7,6 +7,8 @@ title: Research foci of the Machine Learning and Optimisation (MALEO) Group at P
 <h1>We Do Awesome Stuff</h1>
 <div class="separator"></div>
 
+<div id="quick_access"></div>
+
 <blockquote>
 <p>The world is multi-objective ...</p>
 </blockquote>
@@ -37,7 +39,12 @@ Furthermore, our group delves into the realms of Data Stream Mining and Computat
 <h2>Ongoing Projects and Collaboration</h2>
 <div class="separator"></div>
 
-To be written ...
+{% for project in site.projects %}
+    <h3>{{ project.name }}</h3>
+    <span><b>Duration:</b> {{ project.start_date }} to {{ project.end_date }}
+    <p>{{ staff_member.content | markdownify }}</p>
+    <p>The MALEO contact is {{ project.contact }}</p>
+{% endfor %}
 </article>
 
 <article>
