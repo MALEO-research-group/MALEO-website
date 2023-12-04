@@ -2,20 +2,6 @@ $(document).ready(function() {
   // smooth on-hover tooltips
   $("a[title], abbr[title], img[title]").tooltip();
 
-  // smooth scroll if scroll destinations are fixed DOM IDs
-  $("#menu a").click(function(e) {
-    if (this.hash !== "") {
-      // get the destination and prevent default reaction
-      var hash = this.hash;
-      e.preventDefault();
-
-      // now smoothly scroll
-      $('html, body').animate({
-        'scrollTop': $(hash).offset().top - 100
-      }, 700);
-    }
-  });
-
   $("#staff_search").on("focusin", function() {
     if ($(this).val() == "Search by name") {
       $(this).val('');
@@ -54,6 +40,20 @@ $(document).ready(function() {
     // alert(qa);
     $("#quick_access").append(qa);
   }
+
+  // smooth scroll if scroll destinations are fixed DOM IDs
+  $("#quick_access a").click(function(e) {
+    if (this.hash !== "") {
+      // get the destination and prevent default reaction
+      var hash = this.hash;
+      e.preventDefault();
+
+      // now smoothly scroll
+      $('html, body').animate({
+        'scrollTop': $(hash).offset().top - 25
+      }, 300);
+    }
+  });
 
   /* Toggle mobile menu */
   // const toggle = document.querySelector(".toggle");
