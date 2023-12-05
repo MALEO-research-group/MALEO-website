@@ -102,6 +102,17 @@ p {
 	margin-right: 10px;
 }
 
+.hot_of_the_press {
+	display: inline-block;
+	background-color: white;
+	border-radius: 3px;
+	padding: 1px 5px;
+	color: $maleo-violet-light;
+	font-weight: bold;
+	font-size: 0.8rem;
+	text-transform: uppercase;
+}
+
 
 .highlight {
 	padding: 1rem;
@@ -187,6 +198,30 @@ figure caption {
 	height: 0.25rem;
 	background-color: #efefef;
 	margin: 0px 0 35px;
+}
+
+.pagination {
+	margin-bottom: 1.5rem;
+}
+
+.pagination ul {
+	list-style-type: none;
+	margin-left: 0 !important;
+}
+
+.pagination li {
+	display: inline;
+	margin-right: 1rem;
+}
+
+.previous_page:before {
+	content: '\21AB';
+	padding-left: 5px;
+}
+
+.next_page:after {
+	content: ' \21AC';
+	padding-right: 10px;
 }
 
 #logo {
