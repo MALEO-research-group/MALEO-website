@@ -14,6 +14,10 @@ $(document).ready(function() {
     }
   });
 
+  $(".ribbon_banner").on("hover", function() {
+    $( "#we_are_hiring" ).effect( "shake" );
+  });
+
   // every time we write something into the search field
   $("#staff_search").on("keyup", function() {
     var search_value = $(this).val().toLowerCase();

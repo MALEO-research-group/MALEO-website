@@ -248,6 +248,22 @@ figure caption {
    transition: 0.3s;
 }
 
+.ribbon_banner a:link,
+.ribbon_banner a:visited,
+.ribbon_banner a:active
+ {
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.ribbon_banner a:focus,
+.ribbon_banner a:hover {
+	color: white;
+}
+
+
+
+
 .ribbon_banner:hover {
 	opacity: 1;
 }
@@ -278,7 +294,7 @@ figure caption {
 	// background: rgba($maleo-violet-dark, 1);
 	// border-radius: 5px;
 	// border: 1px solid $maleo-violet-dark;
-	padding: 10px;
+	// padding: 10px;
 }
 
 #content a:link,
