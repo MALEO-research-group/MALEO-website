@@ -55,19 +55,9 @@ $(document).ready(function() {
     }
   });
 
-  /* Toggle mobile menu */
-  // const toggle = document.querySelector(".toggle");
-  // const menu = document.querySelector("#menu");
-
-  // function toggleMenu() {
-  //   if (menu.classList.contains("active")) {
-  //     menu.classList.remove("active");
-  //     toggle.innerHTML = "<i class='fas fa-bars'></i>";
-  //   } else {
-  //     menu.classList.add("active");
-  //     toggle.innerHTML = "<i class='fas fa-times'></i>";
-  //   }
-  // }
-  // toggle.addEventListener("click", toggleMenu, false);
+  $("#menu_icon").on("click", function() {
+    $("#main_nav").slideToggle();
+    $(this).toggleClass("active");
+  });
 });
 

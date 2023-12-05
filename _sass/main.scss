@@ -107,7 +107,9 @@ p {
 	padding: 1rem;
 	// border-radius: 10px;
 	background: #efefef;
+	// background: rgba($maleo-pink, 0.4);
 	color: $maleo-violet-dark;
+	// color: white;
 	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
 	margin-bottom: 2rem;
 }
@@ -188,6 +190,7 @@ figure caption {
 }
 
 #logo {
+	display: inline-block;
 	margin: 0 6px 25px 0 !important;
 }
 
@@ -286,6 +289,23 @@ a.link_button:hover {
 
 #main_nav {
 	margin-bottom: 2rem;
+}
+
+#menu_icon {
+  position: absolute;
+  right: 1rem;
+  top: 40px;
+  z-index: 10000;
+  display: block;
+}
+
+#menu_icon span {
+  border: 2px solid $maleo-violet-dark;
+  width: 30px;
+  margin-bottom: 5px;
+  display: block;
+  -webkit-transition: all .2s;
+  transition: all .1s
 }
 
 #main_nav a:link,
@@ -417,6 +437,10 @@ input[type=search]:focus {
 	color: #efefef;
 }
 
+#content > section {
+	max-width: 700px;
+}
+
 #content ul,
 #content ol {
 	margin-left: 1.3rem;
@@ -455,14 +479,13 @@ input[type=search]:focus {
 	}
 
 	#sidebar {
-		box-sizing: border-box; // TODO: border-box for ALL elements!
 		position: fixed;
 		height: 100px;
 		width: 100%;
-		padding: 18px 1rem;
+		padding: 18px 0 0 1rem;
 		margin: 0;
 		z-index: 1000;
-		overflow: hidden;
+		// overflow: hidden;
 		text-align: left;
 		box-shadow: 0px 5px 0px 	rgba(0, 0, 0, 0.3);
 	}
@@ -475,20 +498,47 @@ input[type=search]:focus {
 		padding: 140px 1rem 3rem;
 	}
 
+	#content > section {
+		max-width: none;
+	}
+
 	#sidebar nav {
-		opacity: 0;
-		width: 100%;
+		display: none;
+		width: 40%;
+		margin-left: 60%;
+		margin-top: -20px;
 		text-align: right;
-
+		padding: 1rem;
+		background: white;
 	}
 
-	#sidebar:hover {
-		height: 100%;
-		opacity: 1;
-		transition: 0.2s;
-	}
+	#menu_icon {
+		display: block;
+      	cursor: pointer
+  	}
 
-	#sidebar:hover nav {
-		opacity: 1;
-	}
+  	#menu_icon.active .first {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        margin-top: 10px
+    }
+
+    #menu_icon.active .second {
+        transform: rotate(135deg);
+        -webkit-transform: rotate(135deg);
+        position: relative;
+        top: -9px;
+    }
+
+    #menu_icon.active .third {
+        display: none
+    }
+
+    #staff {
+    	text-align: center;
+    }
+
+    #staff img {
+    	margin: 1rem auto;
+    }
 }

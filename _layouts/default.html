@@ -12,6 +12,11 @@
     {% endif %}
   </head>
   <body>
+    <div id="menu_icon">
+      <span class="first"></span>
+      <span class="second"></span>
+      <span class="third"></span>
+    </div>
     <a href="#" id="color_theme_switch" title="Invert color theme">Invert color theme</a>
     <aside class=ribbon_banner>We are hiring!</aside>
     <main>
@@ -27,8 +32,10 @@
           </div>
         </div>
         <div class="column" id="content">
+          <section>
           {{ content }}
           {% include footer.html %}
+          </section>
         </div>
       </section>
     </main>
