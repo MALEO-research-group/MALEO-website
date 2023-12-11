@@ -260,6 +260,10 @@ figure caption {
 	margin: 0 6px 25px 0 !important;
 }
 
+// #logo:hover {
+// 	background-color: white;
+// }
+
 .ribbon_banner {
    display: block;
    position: fixed;
@@ -413,22 +417,21 @@ a.link_button:hover {
 }
 
 #staff li {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+	gap: 0;
 	position: relative;
 	margin-bottom: 30px;
 	max-width: 100%;
 }
 
 #staff img {
-	border-radius: 100px;
+	border-radius: 50%;
 	display: block;
+	max-width: 200px;
+	width: 80%;
 	margin-bottom: 12px;
 }
-
-// #staff a.link_button {
-// 	position: absolute;
-// 	top: 7.5%;
-// 	left: 14%;
-// }
 
 #staff_filter {
 	margin-bottom: 3rem;
@@ -457,20 +460,20 @@ input {
 input[type=search] {
 	display: block;
 	width: 100%;
-	padding: 10px 15px 10px 50px;
-
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	background: no-repeat 3% 50%/4% url("/assets/images/icons/magnifier.png") transparent;
+	padding: 10px 15px 10px 55px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	background: no-repeat 20px 50%/3% url("/assets/images/icons/magnifier.png") transparent;
 	border-radius: 0;
 	opacity: 0.5;
 	box-sizing: border-box;
-	color: #afafaf;
+	color: $content-main-font-color;
 	outline: none;
+	transition: 0.3s;
 }
 
 input[type=search]:focus {
 	background-color: white;
-	border-color: rgba(255, 255, 255, 1);
+	border: 1px solid rgba(0, 0, 0, 0.4);
 	outline: none;
 }
 
@@ -610,6 +613,10 @@ a#upb_logo {
 
     #staff {
     	text-align: center;
+    }
+
+    #staff li {
+    	display: block;
     }
 
     #staff img {

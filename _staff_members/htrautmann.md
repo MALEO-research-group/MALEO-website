@@ -20,8 +20,5 @@ external_links:
   - researchgate:
     name: researchgate
     url: https://www.researchgate.net/profile/Heike-Trautmann
-  - twitter:
-    name: twitter
-    url: https://twitter.com/HeikeTrautmann4
 ---
 Heike Trautmann is Professor of Data Science: Statistics and Optimization, both at the Department of Information Systems, University of Münster, Germany and the University of Twente, Netherlands. She is also Director of the European Research Center for Information Systems (ERCIS) and key supporter of the Confederation of Laboratories for Artificial Intelligence Research in Europe (CLAIRE). Her research mainly focuses on Data Science, Automated Algorithm Selection and Configuration, Exploratory Landscape Analysis, (Multiobjective) Evolutionary Optimization and Data Stream Mining. She is Associate Editor of the IEEE Transactions on Evolutionary Computation and the Evolutionary Computation Journal (ECJ).

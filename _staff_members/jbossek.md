@@ -23,8 +23,5 @@ external_links:
   - researchgate:
     name: researchgate
     url: https://www.researchgate.net/profile/Jakob-Bossek
-  - twitter:
-    name: twitter
-    url: https://twitter.com/bossekjakob
 ---
 Jakob received his bachelor degree in Statistics and diploma in Computer Science from the TU Dortmund University (Germany) in 2013 and 2014, respectively. In 2018 he finished his doctorate studies in Information Systems at the University of Münster, Germany. He held PostDoc positions at the University of Münster, Germany and the University of Adelaide, Australia. He is now assistant professor (Akademischer Rat) at the Chair for AI Methodology (AIM) at the RWTH Aachen University. His broad research interests include practical and theoretical aspects of bio-inspired problem solving, in particular evolutionary algorithms for NP-hard combinatorial optimisation problems.

@@ -63,5 +63,15 @@ $(document).ready(function() {
     $("#main_nav").slideToggle();
     $(this).toggleClass("active");
   });
+
+  const name_mapping = new Map();
+  name_mapping.set('Trautmann, Heike', 'htrautmann');
+  name_mapping.set('Bossek, Jakob', 'jbossek');
+
+  $(".publications li span").each(function() {
+    for (const [key, value] of name_mapping) {
+      $(this).html($(this).html().replace(key, '<a href="/staff_members/' + value + '.html">' + key + '</a>'));
+    }
+  });
 });
 
