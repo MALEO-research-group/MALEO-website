@@ -149,7 +149,7 @@ p {
 
 
 .highlight {
-	padding: 1rem;
+	padding: 1rem 2rem;
 	background: $highlight-box-background-color;
 	color: $highlight-box-font-color;
 	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
@@ -257,7 +257,7 @@ figure caption {
 
 #logo {
 	display: inline-block;
-	margin: 0 6px 25px 0 !important;
+	margin: 0 4rem 25px 0 !important;
 }
 
 // #logo:hover {
@@ -316,10 +316,6 @@ figure caption {
 	z-index: 9999;
 }
 
-#main_nav ul {
-	list-style-type: none;
-}
-
 #content a:link,
 #content a:visited,
 #content a:active {
@@ -360,7 +356,8 @@ a.link_button:hover {
 	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
-#main_nav {
+#main_nav ul {
+	list-style-type: none;
 	margin-bottom: 2rem;
 }
 
@@ -381,6 +378,27 @@ a.link_button:hover {
   transition: all .1s
 }
 
+// #main_nav a:link,
+// #main_nav a:visited,
+// #main_nav a:active {
+// 	font-size: 1.4rem;
+// 	font-weight: normal;
+// 	line-height: 1.5rem;
+// 	color: $nav-link-color;
+// 	text-decoration: none;
+// 	display: inline-block;
+// 	padding: 5px 6px 5px 12px;
+// 	border-right: 3px solid transparent;
+// 	border-bottom: 0;
+// }
+
+// #main_nav a:focus,
+// #main_nav a:hover,
+// #main_nav a.active {
+// 	color: $nav-link-hover-color;
+// 	border-right-color: $nav-link-hover-color;
+// }
+
 #main_nav a:link,
 #main_nav a:visited,
 #main_nav a:active {
@@ -389,22 +407,26 @@ a.link_button:hover {
 	line-height: 1.5rem;
 	color: $nav-link-color;
 	text-decoration: none;
-	display: inline-block;
-	padding: 5px 6px 5px 12px;
-	border-right: 3px solid transparent;
+	display: block;
+	padding: 10px 4rem 10px 12px;
+	// border-right: 3px solid transparent;
 	border-bottom: 0;
+	width: 100%;
+	transition: 0.3s;
 }
 
 #main_nav a:focus,
 #main_nav a:hover,
 #main_nav a.active {
+	padding-right: 4.4rem;
 	color: $nav-link-hover-color;
 	border-right-color: $nav-link-hover-color;
 }
 
 #main_nav a.active {
 	font-weight: bold;
-	background-color: $nav-link-hover-background-color;
+	color: $ribbon-background-color;
+	background-color: white; // $nav-link-hover-background-color;
 }
 
 #main_nav li:not(:last-child) {
@@ -493,8 +515,9 @@ input[type=search]:focus {
 }
 
 #sidebar {
+	padding: 4rem 0rem;
 	background-color: $header-background-color;
-	padding-left: 20%;
+	// padding-left: 20%;
 	text-align: right;
 	position: relative;
 	display: block;
@@ -502,7 +525,8 @@ input[type=search]:focus {
 
 #sidebar > div {
 	position: fixed;
-	right: calc(80% + 4rem);
+	right: 80%;
+	width: 100%;
 }
 
 #content {
