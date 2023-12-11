@@ -6,38 +6,24 @@ title: Publications - Machine Learning and Optimisation (MALEO) Group at Paderbo
 <h1>MALEO Publications</h1>
 <div class="separator"></div>
 
+<p>In the following you can find a list of our most recent work <b>published in 2023</b>. For more information we refer to <a href="https://ris.uni-paderborn.de/record?cql=(person=100740%20OR%20person=102979)&limit=10&sort=year.desc&sort=type.desc&cql=status=public" class="external" title="External link to the Research Information System at Paderborn University">our official Research Information Systems (RIS) page at UPB</a> and the personal webpages / Google scholar profils of our <a href="/staff.html" class="internal">staff members</a>.</p>
+
+
 <!--div id="staff_filter">
     <label for="staff_name" class="hide">Search by name</label>
     <input type="search" id="staff_search" name="staff_search" value="Search by name">
 </div-->
 
 <article>
-    <h2>Journal Aricles (peer-reviewed)</h2> <!--span class="gray">[{% bibliography_count -f bib --query @article[journal!=CoRR] %}]</span></h2-->
+    <h2>Journal Articles</h2> <!--span class="gray">[{% bibliography_count -f bib --query @article[journal!=CoRR] %}]</span></h2-->
     <div class="separator"></div>
 
     {% bibliography --file bib --query @article[journal!=CoRR] %}
 </article>
 
 <article>
-    <h2>Conference Articles (peer-reviewed)</h2> <!--span class="gray">[{% bibliography_count -f bib --query @inproceedings %}]</span></h2-->
+    <h2>Conference Articles</h2> <!--span class="gray">[{% bibliography_count -f bib --query @inproceedings %}]</span></h2-->
     <div class="separator"></div>
 
     {% bibliography --file bib --query @inproceedings %}
 </article>
-
-<article>
-<h2>Books</h2> <!--span class="gray">[{% bibliography_count -f bib --query @book %}]</span></h2-->
-<div class="separator"></div>
-
-{% bibliography --file bib --query @book %}
-
-</article>
-
-<article>
-    <h2>Technical Reports &amp; Preprints</h2> <!--span class="gray">[{% bibliography_count -f bib --query @article[journal=CoRR] %}]</span></h2-->
-    <div class="separator"></div>
-
-
-    {% bibliography --file bib --query @article[journal=CoRR] %}
-</article>
-

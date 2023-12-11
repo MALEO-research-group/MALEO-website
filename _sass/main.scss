@@ -1,43 +1,77 @@
-// :root {
-//   /* RWTH primary color */
-//   --rwth-blue-100: rgb(0,84,159);
-//   --rwth-blue-75: rgb(64,127,183);
-//   --rwth-blue-50: rgb(142,186,229);
-//   --rwth-blue-25: rgb(199,221,242);
-//   --rwth-blue-10: rgb(232,241,250);
-// }
+:root {
+	/* MALEO colors */
+	--maleo-violet-dark: rgb(102, 69, 147);
+	--maleo-violet-very-dark: rgb(68, 12, 169);
+	--maleo-violet-light: rgb(170, 64, 142);
+	--maleo-pink: rgb(224, 68, 136);
+	--maleo-violet-reduced: rgb(38, 60, 145);
+	--black: #000;
+	--white: #fff;
+}
 
-// /* COLOR VARIABLES */
-// $main-font-color: var(--rwth-blue-75) !default;
-// /* background of highlight boxes (e.g., mainly the "teaser" box at the top of the homepage) */
-// $background-color-highlight-strong: var(--rwth-blue-100) !default;
-// /* light gray background */
-// $background-color-highlight-light: var(--rwth-black-10) !default;
-// /* add headers h{1,...,4} */
-// $headline-color: var(--rwth-blue-100) !default;
-// /* links in main sections */
-// $link-color: var(--rwth-blue-75) !default;
-// $link-hover-color: var(--rwth-blue-100) !default;
-// /* currently active link */
-// $link-active-color: var(--link-hover-color) !default;
-// $refer-color: var(--rwth-black-50) !default;
-// /* special colors */
-// $alert-color: var(--rwth-red-100) !default;
+// INVERTED (header violet, content white)
+$content-main-font-color: var(--black) !default;
+$content-background-color: var(--white) !default;
+$content-highlight-color: var(--maleo-violet-light) !default;
+
+$content-link-color: rgba(0, 0, 0, 0.75);
+$content-link-hover-color: rgba(0, 0, 0, 0.85);
+
+$header-main-font-color: var(--white) !default;
+$header-background-color: var(--maleo-violet-dark) !default;
+
+$tooltip-box-color: var(--maleo-violet-very-dark) !default;
+$tooltip-box-font-color: var(--white) !default;
+
+$highlight-box-background-color: var(--maleo-violet-dark) !default;
+$highlight-box-font-color: var(--white) !default;
+
+$nav-link-color: #fff;
+$nav-link-hover-color: rgba(255, 255, 255, 0.8);
+$nav-link-hover-background-color: rgba(38, 60, 145, 0.3);
+
+$separator-color: rgba(0, 0, 0, 0.5);
+$citation-font-color: #dfdfdf;
+$abbreviation-highlight-color: #dfdfdf;
+$image-border-color: #dfdfdf;
+$button-color: var(--maleo-violet-light) !default;
+$ribbon-background-color: var(--maleo-violet-light);
 
 
-$maleo-violet-dark: rgb(102, 69, 147);
-$maleo-violet-very-dark: rgb(68, 12, 169);
-$maleo-violet-light: rgb(170, 64, 142);
-$maleo-pink: rgb(224, 68, 136);
-$maleo-violet-reduced: rgb(38, 60, 145);
-$black: #000;
+// DEFAULT
+// $content-main-font-color: #cfcfcf;
+// $content-background-color: var(--maleo-violet-dark) !default;
+// $content-highlight-color: var(--maleo-violet-light) !default;
+
+// $content-link-color: rgba(255, 255, 255, 0.75);
+// $content-link-hover-color: rgba(255, 255, 255, 0.85);
+
+// $header-main-font-color: var(--maleo-violet-light) !default;
+// $header-background-color: white !default;
+
+// $tooltip-box-color: var(--maleo-violet-very-dark) !default;
+// $tooltip-box-font-color: var(--white) !default;
+
+// $highlight-box-background-color: white !default;
+// $highlight-box-font-color: var(--maleo-violet-dark) !default;
+
+// $nav-link-color: var(--maleo-violet-light);
+// $nav-link-hover-color: var(--maleo-violet-dark);
+// $nav-link-hover-background-color: rgba(102, 69, 147, 0.1);
+
+// $separator-color: #cfcfcf;
+// $citation-font-color: #ffffff;
+// $abbreviation-highlight-color: #ffffff;
+// $image-border-color: #ffffff;
+// $button-color: var(--maleo-violet-light) !default;
 
 // Note: basic CSS reset is done in _sass/reset.scss
 
 body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	line-height: 1.5;
+	font-size: 18px;
 	-webkit-font-smoothing: antialiased;
 	position: relative;
 }
@@ -107,7 +141,7 @@ p {
 	background-color: white;
 	border-radius: 3px;
 	padding: 1px 5px;
-	color: $maleo-violet-light;
+	color: $content-highlight-color;
 	font-weight: bold;
 	font-size: 0.8rem;
 	text-transform: uppercase;
@@ -116,11 +150,8 @@ p {
 
 .highlight {
 	padding: 1rem;
-	// border-radius: 10px;
-	background: #efefef;
-	// background: rgba($maleo-pink, 0.4);
-	color: $maleo-violet-dark;
-	// color: white;
+	background: $highlight-box-background-color;
+	color: $highlight-box-font-color;
 	box-shadow: 3px 3px 1px rgba(0, 0, 0, 0.3);
 	margin-bottom: 2rem;
 }
@@ -134,18 +165,18 @@ blockquote {
 	font-weight: 500;
 	font-size: 1.5rem;
 	line-height: 1.7rem;
-	color: white;
+	color: $citation-font-color;
 	quotes: "\201C""\201D""\2018""\2019";
 	margin-bottom: 25px;
 }
 
 blockquote:before {
-  color: white;
+  color: $citation-font-color;
   content: open-quote;
 }
 
 blockquote:after {
-  color: white;
+  color: $citation-font-color;
   content: close-quote;
 }
 
@@ -154,7 +185,7 @@ blockquote p {
 }
 
 b {
-	font-weight: 500;
+	font-weight: bold;
 }
 
 i {
@@ -162,7 +193,7 @@ i {
 }
 
 abbr {
-	border-bottom: 1px dotted white;
+	border-bottom: 1px dotted var(--black);;
 	cursor: help;
 }
 
@@ -174,7 +205,7 @@ figure {
 
 figure img {
 	display: block;
-	border: 5px solid white;
+	border: 5px solid $image-border-color;
 	margin: 0 auto 7px;
 }
 
@@ -196,7 +227,7 @@ figure caption {
 	display: block;
 	width: 5rem;
 	height: 0.25rem;
-	background-color: #efefef;
+	background-color: $separator-color;
 	margin: 0px 0 35px;
 }
 
@@ -233,17 +264,17 @@ figure caption {
    display: block;
    position: fixed;
    top: 50px;
-   left: -120px;
+   right: -120px;
    width: 400px;
    height: 50px;
    line-height: 50px;
    text-align: center;
    opacity: 0.7;
-   transform: rotate(-45deg);
+   transform: rotate(45deg);
    font-size: 1.5rem;
-   font-weight: 500 !important;
-   color: rgb(255, 255, 255) !important;
-   background-color: $maleo-violet-dark;
+   font-weight: bold !important;
+   color: #fff !important;
+   background-color: $ribbon-background-color;
    z-index: 500;
    transition: 0.3s;
 }
@@ -253,23 +284,21 @@ figure caption {
 .ribbon_banner a:active
  {
 	text-decoration: none;
-	color: rgba(255, 255, 255, 0.8);
+	color: $header-main-font-color;
 }
 
 .ribbon_banner a:focus,
 .ribbon_banner a:hover {
-	color: white;
+	color: $header-main-font-color;
 }
-
-
-
 
 .ribbon_banner:hover {
 	opacity: 1;
 }
 
 #color_theme_switch {
-	display: block;
+	display: none;
+	// display: block;
 	width: 22px;
 	height: 22px;
 	border-radius: 11px;
@@ -279,8 +308,7 @@ figure caption {
 	margin-left: -11px;
     text-indent: -9999px;
 	overflow: hidden;
-	background: linear-gradient(to right, $maleo-violet-dark 50%, white 50%);
-    background-color: red;
+	background: linear-gradient(to right, $header-background-color 50%, $content-background-color 50%);
 	z-index: 9999;
 }
 
@@ -288,29 +316,20 @@ figure caption {
 	list-style-type: none;
 }
 
-#we_are_hiring {
-	// display: none;
-	// color: white;
-	// background: rgba($maleo-violet-dark, 1);
-	// border-radius: 5px;
-	// border: 1px solid $maleo-violet-dark;
-	// padding: 10px;
-}
-
 #content a:link,
 #content a:visited,
 #content a:active {
-	color: rgba(white, 0.75);
+	color: $content-link-color;
 	text-decoration: none;
-	font-weight: 500;
-	border-bottom: 1px solid rgba(white, 0.75);
+	font-weight: bold;
+	border-bottom: 1px solid $content-link-color;
 	transition: 0.3s;
 }
 
 #content a:focus,
 #content a:hover {
-	color: white;
-	border-bottom: 1px solid white;
+	color: $content-link-hover-color;
+	border-bottom: 1px solid $content-link-hover-color;
 }
 
 #content a.external:after {
@@ -326,16 +345,15 @@ a.link_button:active {
 	padding: 1px 5px;
 	border-radius: 3px;
 	border: 0 !important;
-	color: #white;
 	text-decoration: none;
-	background-color: $maleo-violet-light;
-	box-shadow: 3px 3px 0px rgba($black, 0.25);
+	background-color: $button-color;
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
 
 a.link_button:focus,
 a.link_button:hover {
-	background-color: $maleo-violet-light;
-	box-shadow: 2px 2px 0px rgba($black, 0.25);
+	// background-color: $maleo-violet-light;
+	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
 #main_nav {
@@ -347,11 +365,11 @@ a.link_button:hover {
   right: 1rem;
   top: 40px;
   z-index: 10000;
-  display: block;
+  display: none;
 }
 
 #menu_icon span {
-  border: 2px solid $maleo-violet-dark;
+  border: 2px solid $header-main-font-color;
   width: 30px;
   margin-bottom: 5px;
   display: block;
@@ -363,25 +381,26 @@ a.link_button:hover {
 #main_nav a:visited,
 #main_nav a:active {
 	font-size: 1.4rem;
+	font-weight: normal;
 	line-height: 1.5rem;
-	color: $maleo-violet-light;
+	color: $nav-link-color;
 	text-decoration: none;
 	display: inline-block;
 	padding: 5px 6px 5px 12px;
 	border-right: 3px solid transparent;
+	border-bottom: 0;
 }
 
 #main_nav a:focus,
 #main_nav a:hover,
 #main_nav a.active {
-	color: $maleo-violet-dark;
-	border-right-color: $maleo-violet-dark;
+	color: $nav-link-hover-color;
+	border-right-color: $nav-link-hover-color;
 }
 
 #main_nav a.active {
 	font-weight: bold;
-	background-color: rgba($maleo-violet-dark, 0.1);
-	// border-radius: 10px 0 0 10px;
+	background-color: $nav-link-hover-background-color;
 }
 
 #main_nav li:not(:last-child) {
@@ -457,7 +476,7 @@ input[type=search]:focus {
 
 .container {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 4fr;
 	gap: 0;
 	position: relative;
 	width: 100%;
@@ -465,12 +484,12 @@ input[type=search]:focus {
 
 .column {
 	padding: 4rem;
-	background-color: $maleo-violet-dark;
+	background-color: $content-background-color;
 	min-height: 100vh;
 }
 
 #sidebar {
-	background-color: white;
+	background-color: $header-background-color;
 	padding-left: 20%;
 	text-align: right;
 	position: relative;
@@ -479,17 +498,17 @@ input[type=search]:focus {
 
 #sidebar > div {
 	position: fixed;
-	right: calc(50% + 4rem);
+	right: calc(80% + 4rem);
 }
 
 #content {
 	padding-right: 20%;
 	padding-top: 4.1rem;
-	color: #efefef;
+	color: $content-main-font-color;
 }
 
 #content > section {
-	max-width: 700px;
+	max-width: 900px;
 }
 
 #content ul,
@@ -498,11 +517,15 @@ input[type=search]:focus {
 }
 
 #tooltip {
-	color: white;
+	color: $tooltip-box-font-color;
 	font-size: 0.85rem;
-	background-color: $maleo-violet-reduced;
+	background-color: $tooltip-box-color;
 	padding: 0.6rem 1.2rem;
-	box-shadow: 5px 5px 0px rgba($black, 0.25);
+	box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+a#upb_logo {
+	border-bottom: none !important;
 }
 
 @media (max-width: 1500px) {
