@@ -37,34 +37,6 @@ $image-border-color: #dfdfdf;
 $button-color: var(--maleo-violet-light) !default;
 $ribbon-background-color: var(--maleo-violet-light);
 
-
-// DEFAULT
-// $content-main-font-color: #cfcfcf;
-// $content-background-color: var(--maleo-violet-dark) !default;
-// $content-highlight-color: var(--maleo-violet-light) !default;
-
-// $content-link-color: rgba(255, 255, 255, 0.75);
-// $content-link-hover-color: rgba(255, 255, 255, 0.85);
-
-// $header-main-font-color: var(--maleo-violet-light) !default;
-// $header-background-color: white !default;
-
-// $tooltip-box-color: var(--maleo-violet-very-dark) !default;
-// $tooltip-box-font-color: var(--white) !default;
-
-// $highlight-box-background-color: white !default;
-// $highlight-box-font-color: var(--maleo-violet-dark) !default;
-
-// $nav-link-color: var(--maleo-violet-light);
-// $nav-link-hover-color: var(--maleo-violet-dark);
-// $nav-link-hover-background-color: rgba(102, 69, 147, 0.1);
-
-// $separator-color: #cfcfcf;
-// $citation-font-color: #ffffff;
-// $abbreviation-highlight-color: #ffffff;
-// $image-border-color: #ffffff;
-// $button-color: var(--maleo-violet-light) !default;
-
 // Note: basic CSS reset is done in _sass/reset.scss
 
 body {
@@ -104,7 +76,7 @@ h1 {
 
 h2 {
 	font-size: 2.2rem;
-	line-height: 2.3rem;
+	line-height: 3rem;
 }
 
 h3 {
@@ -260,6 +232,10 @@ figure caption {
 	margin: 0 4rem 25px 0 !important;
 }
 
+footer {
+	margin: 4rem 0rem;
+}
+
 // #logo:hover {
 // 	background-color: white;
 // }
@@ -356,6 +332,10 @@ a.link_button:hover {
 	box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 
+#sidebar nav {
+	display: block;
+}
+
 #main_nav ul {
 	list-style-type: none;
 	margin-bottom: 2rem;
@@ -378,27 +358,6 @@ a.link_button:hover {
   transition: all .1s
 }
 
-// #main_nav a:link,
-// #main_nav a:visited,
-// #main_nav a:active {
-// 	font-size: 1.4rem;
-// 	font-weight: normal;
-// 	line-height: 1.5rem;
-// 	color: $nav-link-color;
-// 	text-decoration: none;
-// 	display: inline-block;
-// 	padding: 5px 6px 5px 12px;
-// 	border-right: 3px solid transparent;
-// 	border-bottom: 0;
-// }
-
-// #main_nav a:focus,
-// #main_nav a:hover,
-// #main_nav a.active {
-// 	color: $nav-link-hover-color;
-// 	border-right-color: $nav-link-hover-color;
-// }
-
 #main_nav a:link,
 #main_nav a:visited,
 #main_nav a:active {
@@ -409,6 +368,7 @@ a.link_button:hover {
 	text-decoration: none;
 	display: block;
 	padding: 10px 4rem 10px 12px;
+	// text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 	// border-right: 3px solid transparent;
 	border-bottom: 0;
 	width: 100%;
@@ -557,17 +517,6 @@ a#upb_logo {
 }
 
 @media (max-width: 1500px) {
-	// no distance anymore
-	#sidebar {
-		padding: 4rem;
-	}
-
-	#content {
-		padding-right: 4rem;
-	}
-}
-
-@media (max-width: 1024px) {
 	.column {
 		min-height: 10px; // small dummy value
 	}
@@ -611,10 +560,11 @@ a#upb_logo {
 		margin-top: -20px;
 		text-align: right;
 		padding: 1rem;
-		background: white;
+		background: $header-background-color;
 	}
 
 	#menu_icon {
+		position: fixed;
 		display: block;
       	cursor: pointer
   	}

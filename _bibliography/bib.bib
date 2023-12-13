@@ -16,19 +16,6 @@ References
   year         = {{2023}},
 }
 
-@article{46310,
-  abstract     = {{Classic automated algorithm selection (AS) for (combinatorial) optimization problems heavily relies on so-called instance features, i.e., numerical characteristics of the problem at hand ideally extracted with computationally low-demanding routines. For the traveling salesperson problem (TSP) a plethora of features have been suggested. Most of these features are, if at all, only normalized imprecisely raising the issue of feature values being strongly affected by the instance size. Such artifacts may have detrimental effects on algorithm selection models. We propose a normalization for two feature groups which stood out in multiple AS studies on the TSP: (a) features based on a minimum spanning tree (MST) and (b) nearest neighbor relationships of the input instance. To this end we theoretically derive minimum and maximum values for properties of MSTs and k-nearest neighbor graphs (NNG) of Euclidean graphs. We analyze the differences in feature space between normalized versions of these features and their unnormalized counterparts. Our empirical investigations on various TSP benchmark sets point out that the feature scaling succeeds in eliminating the effect of the instance size. A proof-of-concept AS-study shows promising results: models trained with normalized features tend to outperform those trained with the respective vanilla features.}},
-  author       = {{Heins, Jonathan and Bossek, Jakob and Pohl, Janina and Seiler, Moritz and Trautmann, Heike and Kerschke, Pascal}},
-  issn         = {{0304-3975}},
-  journal      = {{Theoretical Computer Science}},
-  keywords     = {{Feature normalization, Algorithm selection, Traveling salesperson problem}},
-  pages        = {{123--145}},
-  title        = {{{A study on the effects of normalized TSP features for automated algorithm selection}}},
-  doi          = {{10.1016/j.tcs.2022.10.019}},
-  volume       = {{940}},
-  year         = {{2023}},
-}
-
 @article{48883,
   abstract     = {{Classic automated algorithm selection (AS) for (combinatorial) optimization problems heavily relies on so-called instance features, i.e., numerical characteristics of the problem at hand ideally extracted with computationally low-demanding routines. For the traveling salesperson problem (TSP) a plethora of features have been suggested. Most of these features are, if at all, only normalized imprecisely raising the issue of feature values being strongly affected by the instance size. Such artifacts may have detrimental effects on algorithm selection models. We propose a normalization for two feature groups which stood out in multiple AS studies on the TSP: (a) features based on a minimum spanning tree (MST) and (b) nearest neighbor relationships of the input instance. To this end we theoretically derive minimum and maximum values for properties of MSTs and k-nearest neighbor graphs (NNG) of Euclidean graphs. We analyze the differences in feature space between normalized versions of these features and their unnormalized counterparts. Our empirical investigations on various TSP benchmark sets point out that the feature scaling succeeds in eliminating the effect of the instance size. A proof-of-concept AS-study shows promising results: models trained with normalized features tend to outperform those trained with the respective vanilla features.}},
   author       = {{Heins, Jonathan and Bossek, Jakob and Pohl, Janina and Seiler, Moritz and Trautmann, Heike and Kerschke, Pascal}},
@@ -105,7 +92,7 @@ References
 @inproceedings{48886,
   abstract     = {{Generating new instances via evolutionary methods is commonly used to create new benchmarking data-sets, with a focus on attempting to cover an instance-space as completely as possible. Recent approaches have exploited Quality-Diversity methods to evolve sets of instances that are both diverse and discriminatory with respect to a portfolio of solvers, but these methods can be challenging when attempting to find diversity in a high-dimensional feature-space. We address this issue by training a model based on Principal Component Analysis on existing instances to create a low-dimension projection of the high-dimension feature-vectors, and then apply Novelty Search directly in the new low-dimension space. We conduct experiments to evolve diverse and discriminatory instances of Knapsack Problems, comparing the use of Novelty Search in the original feature-space to using Novelty Search in a low-dimensional projection, and repeat over a given set of dimensions. We find that the methods are complementary: if treated as an ensemble, they collectively provide increased coverage of the space. Specifically, searching for novelty in a low-dimension space contributes 56% of the filled regions of the space, while searching directly in the feature-space covers the remaining 44%.}},
   author       = {{Marrero, Alejandro and Segredo, Eduardo and Hart, Emma and Bossek, Jakob and Neumann, Aneta}},
-  booktitle    = {{Proceedings of the Genetic} and Evolutionary Computation Conference}},
+  booktitle    = {{Proceedings of the Genetic} and Evolutionary Computation Conference},
   isbn         = {{9798400701191}},
   keywords     = {{evolutionary computation, instance generation, instance-space analysis, knapsack problem, novelty search}},
   pages        = {{312–320}},

@@ -1,7 +1,5 @@
 $(document).ready(function() {
-  // smooth on-hover tooltips
-  $("a[title], abbr[title], img[title]").tooltip();
-
+  // search field for staff members
   $("#staff_search").on("focusin", function() {
     if ($(this).val() == "Search by name") {
       $(this).val('');
@@ -12,10 +10,6 @@ $(document).ready(function() {
     if ($(this).val() == "") {
       $(this).val("Search by name");
     }
-  });
-
-  $(".ribbon_banner").on("hover", function() {
-    $( "#we_are_hiring" ).effect( "shake" );
   });
 
   // every time we write something into the search field
@@ -59,19 +53,27 @@ $(document).ready(function() {
     }
   });
 
+  // menu icon for mobile design
   $("#menu_icon").on("click", function() {
     $("#main_nav").slideToggle();
     $(this).toggleClass("active");
   });
 
+  // dynamics for list of publications
   const name_mapping = new Map();
   name_mapping.set('Trautmann, Heike', 'htrautmann');
   name_mapping.set('Bossek, Jakob', 'jbossek');
+  name_mapping.set('Preuß, Oliver Ludger', 'opreuss');
+  name_mapping.set('Grimme, Britta', 'bgrimme');
 
   $(".publications li span").each(function() {
     for (const [key, value] of name_mapping) {
-      $(this).html($(this).html().replace(key, '<a href="/staff_members/' + value + '.html">' + key + '</a>'));
+      // $(this).html($(this).html().replace(key, '<a href="/staff_members/' + value + '.html">' + key + '</a>'));
+      $(this).html($(this).html().replace(key, '<b title="MALEO staff member">' + key + '</b>'));
     }
   });
+
+    // smooth on-hover tooltips
+  $("a[title], b[title], abbr[title], img[title]").tooltip();
 });
 

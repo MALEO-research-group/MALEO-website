@@ -23,7 +23,7 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
         <p>
             <b>Position:</b> {{ staff_member.position }}<br>
             <b>Phone:</b> {{ staff_member.phone }}<br>
-            <b>E-mail:</b> {{ staff_member.email }}
+            <b>E-mail:</b> <a href="mailto:{{ staff_member.email }}?subject=Contact%20via%20MALEO%20website" title="Write an email to {{ staff_member.short_name }}">{{ staff_member.email }}</a>
         </p>
         {{ staff_member.content | markdownify }}
         {% if staff_member.external_links %}
