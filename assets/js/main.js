@@ -17,7 +17,8 @@ $(document).ready(function() {
     var search_value = $(this).val().toLowerCase();
     console.log("changed!" + search_value);
     $("#staff li").each(function() {
-      var member_name = $(this).find("a").html().toLowerCase();
+      var member_name = $(this).find("h3").html().toLowerCase();
+      console.log(member_name + " 1");
       if (member_name.includes(search_value)) {
         $(this).removeClass('hide');
       } else {

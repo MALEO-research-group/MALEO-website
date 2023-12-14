@@ -2,9 +2,12 @@ collections:
   staff_members:
     # people: true # define collection as hash-map
     output: true # rendered page for every staff member
+    sort_by: order
   projects:
     people: true
 
+website: http://dev.jakobbossek.de
+url: "http://dev.jakobbossek.de"
 
 # define layouts for specific pages/collections/etc.
 defaults:

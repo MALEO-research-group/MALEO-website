@@ -6,7 +6,7 @@ academic_title: M.Sc.
 position: PhD student
 email: oliver.preuss@uni-paderborn.de
 # phone: +49 241 80 21453
-order: 20
+order: 50
 external_links:
   - linkedin:
     name: LinkedIn

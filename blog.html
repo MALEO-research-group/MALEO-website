@@ -14,11 +14,11 @@ pagination:
   	<h2>{{ post.title }}</h2>
   	{% assign staff_member = site.staff_members | where: 'identifier', post.author | first %}
   	{% if staff_member %}
-  	<p><b>Posted by <a href="{{ staff_member.url }}">{{ staff_member.name }}</a> on {{ post.date | date: "%-d %B %Y" }}</b>
+  	<p><b>Posted by <a href="{{ staff_member.url | absolute_url }}">{{ staff_member.name }}</a> on {{ post.date | date: "%-d %B %Y" }}</b>
     <span class="hot_of_the_press">hot of the press</span></p>
   	{% endif %}
   	{{ post.excerpt }}
-    <a href="{{ post.url }}">Read more </a>
+    <a href="{{ post.url | absolute_url }}">Read more </a>
   </article>
   {% endfor %}
 
@@ -28,12 +28,12 @@ pagination:
   <ul>
     {% if paginator.previous_page %}
     <li class="previous_page">
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
+      <a href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
     </li>
     {% endif %}
     {% if paginator.next_page %}
     <li class="next_page">
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
+      <a href="{{ paginator.next_page_path | absolute_url }}">Older</a>
     </li>
     {% endif %}
   </ul>
