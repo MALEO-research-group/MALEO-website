@@ -58,6 +58,7 @@ $(document).ready(function() {
   $("#menu_icon").on("click", function() {
     $("#main_nav").slideToggle();
     $(this).toggleClass("active");
+    // $("#main_nav").toggleClass("hide");
   });
 
   // dynamics for list of publications
