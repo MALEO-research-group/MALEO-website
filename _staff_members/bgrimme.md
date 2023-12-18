@@ -2,7 +2,7 @@
 identifier: bgrimme
 short_name: Britta
 name: Britta Grimme
-academic_title: M.Sc.
+academic_title: Dr.
 position: PostDoc
 email: britta.grimme@uni-paderborn.de
 order: 10

@@ -19,13 +19,19 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
         </div>
         <div>
         <!--a class="link_button" href="{{ staff_member.url }}" title="Open staff member page">{{ staff_member.academic_title }} {{ staff_member.name }}</a-->
+        {% if staff_member.academic_title == "M.Sc." or staff_member.academic_title == "B.Sc." %}
+        <h3>{{ staff_member.name }}, {{ staff_member.academic_title }}</h3>
+        {% else %}
         <h3>{{ staff_member.academic_title }} {{ staff_member.name }}</h3>
+        {% endif %}
         <p>
             <b>Position:</b> {{ staff_member.position }}<br>
             {% if staff_member.phone %}
             <b>Phone:</b> {{ staff_member.phone }}<br>
             {% endif %}
+            {% if staff_member.email %}
             <b>E-mail:</b> <a href="mailto:{{ staff_member.email }}?subject=Contact%20via%20MALEO%20website" title="Write an email to {{ staff_member.short_name }}">{{ staff_member.email }}</a>
+            {% endif %}
         </p>
         {{ staff_member.content | markdownify }}
         {% if staff_member.external_links %}
