@@ -9,7 +9,7 @@ collections:
 website: https://www.maleo-research.de
 url: "https://www.maleo-research.de"
 
-exclude: ["Makefile", "CNAME", "robots.txt", ".htaccess", ".htpasswd"]
+exclude: ["Makefile", "CNAME", "robots.txt", ".htaccess", ".htpasswd", "attic/"]
 
 # define layouts for specific pages/collections/etc.
 defaults:
