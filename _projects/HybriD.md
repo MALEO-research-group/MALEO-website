@@ -1,6 +1,6 @@
 ---
 identifier: TRR318
-name: HybriD: Real-Time Detection and Identification of Hybrid Disinformation Campaigns in Online Media,
+name: HybriD - Real-Time Detection and Identification of Hybrid Disinformation Campaigns in Online Media
 url: https://www.uni-muenster.de/Kowi/en/forschen/projekte/hybrid.html
 start_date: 01/11/2023
 end_date: 30/10/2024
