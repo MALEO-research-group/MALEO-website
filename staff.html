@@ -13,7 +13,7 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
 
 <ul id="staff">
 {% for staff_member in site.staff_members %}
-    <li>
+    <li id="staff_member_{{ staff_member.identifier }}">
         <div>
         <img src="/assets/images/{{ staff_member.identifier }}.jpg" width="15%" />
         </div>
@@ -36,7 +36,7 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
         {{ staff_member.content | markdownify }}
         {% if staff_member.external_links %}
             {% for ext_link in staff_member.external_links %}
-                <a href={{ ext_link.url }} class="external">{{ ext_link.name }}</a>
+                <a href={{ ext_link.url }} class="external read_more">{{ ext_link.name }}</a>
             {% endfor %}
         {% endif %}
         </div>

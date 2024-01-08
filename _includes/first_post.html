@@ -3,8 +3,8 @@
 <h3>{{ post.title }}</h3>
 {% assign staff_member = site.staff_members | where: 'identifier', post.author | first %}
 {% if staff_member %}
-<b>Posted by <a href="{{ staff_member.url | absolute_url }}">{{ staff_member.name }}</a></b>
+<p class="posted_by"><b>Posted by <a href="{{ staff_member.url | absolute_url }}">{{ staff_member.name }}</a> on {{ post.date | date: "%-d %B %Y" }}</b>
 {% endif %}
 {{ post.excerpt }}
-<a href="{{ post.url | absolute_url }}">Read more </a>
+<a href="{{ post.url | absolute_url }}" class="read_more">Read more </a>
 </article>

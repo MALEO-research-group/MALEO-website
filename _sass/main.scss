@@ -14,7 +14,7 @@ $content-main-font-color: var(--black) !default;
 $content-background-color: var(--white) !default;
 $content-highlight-color: var(--maleo-violet-light) !default;
 
-$content-link-color: rgba(0, 0, 0, 0.75);
+$content-link-color: rgba(0, 0, 0, 0.55);
 $content-link-hover-color: rgba(0, 0, 0, 0.85);
 
 $content-h1-color: var(--maleo-violet-light) !default;
@@ -252,7 +252,7 @@ figure caption {
 
 #logo {
 	display: inline-block;
-	margin: 0 4rem 25px 0 !important;
+	margin: 0.3rem 4rem 25px 0 !important;
 }
 
 #content footer {
@@ -336,6 +336,24 @@ figure caption {
 	content: '\21AC';
 	padding-left: 5px;
 }
+
+#content a.read_more:link,
+#content a.read_more:visited,
+#content a.read_more:active {
+	display: inline-block;
+	border: 1px solid $content-link-color;
+	font-weight: 400;
+	padding: 4px 10px;
+	font-size: 0.7rem;
+	color: $content-link-color;
+}
+
+#content a.read_more:focus,
+#content a.read_more:hover {
+	color: $content-link-hover-color;
+	border-bolor: $content-link-color;
+}
+
 
 a.link_button:link,
 a.link_button:visited,
@@ -427,7 +445,7 @@ a.link_button:hover {
 	grid-template-columns: 1fr 4fr;
 	gap: 0;
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 3.5rem;
 	max-width: 100%;
 }
 

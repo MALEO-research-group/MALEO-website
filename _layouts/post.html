@@ -7,6 +7,6 @@ layout: default
 
 <h2>{{ page.title }}</h2>
 {% assign author = site.staff_members | where: 'identifier', page.author | first %}
-<p><b>Posted by <a href="{{ author.url | absolute_url }}">{{ author.name }}</a> on {{ page.date | date: "%-d %B %Y" }}</b></p>
+<p class="posted_by"><b>Posted by <a href="{{ author.url | absolute_url }}">{{ author.name }}</a> on {{ page.date | date: "%-d %B %Y" }}</b>
 
 {{ content }}

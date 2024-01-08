@@ -18,7 +18,7 @@ pagination:
     <span class="hot_of_the_press">hot of the press</span></p>
   	{% endif %}
   	{{ post.excerpt }}
-    <a href="{{ post.url | absolute_url }}">Read more </a>
+    <a href="{{ post.url | absolute_url }}" class="read_more">Read more </a>
   </article>
   {% endfor %}
 
