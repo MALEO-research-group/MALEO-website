@@ -2,7 +2,7 @@
 identifier: uskvorc
 short_name: Urban
 name: Urban Škvorc
-academic_title: PostDoc
+academic_title: Dr.
 position: PostDoc
 email: urban.uskvorc@uni-paderborn.de
 order: 11
