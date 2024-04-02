@@ -4,7 +4,7 @@ short_name: Moritz
 name: Moritz Vinzent Seiler
 academic_title: Dr.
 position: PostDoc
-email: seiler@mail.uni-paderborn.de
+email: moritz.seiler@uni-paderborn.de
 # phone: +49 241 80 21453
 order: 12
 external_links:
