@@ -12,14 +12,17 @@ preview:
 
 publish:
 	JEKYLL_ENV=production bundle exec jekyll build
-	cwd=$(pwd)
-	published_repo="../MALEO-research-group.github.io"
-	cp -r _site/* $published_repo
-	cd $(published_repo)
+	cp -r _site/* ../MALEO-research-group.github.io
+	cd ../MALEO-research-group.github.io
 	git add *
 	git commit -m "update website"
 	git push
-	cd $(cwd)
+
+web:
+	open https://www.maleo-research.de
+
+weblocal:
+	open http://127.0.0.1:4000
 
 clean:
 	rm -r .jekyll-cache
