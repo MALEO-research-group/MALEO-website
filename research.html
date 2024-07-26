@@ -39,11 +39,30 @@ Furthermore, our group delves into the realms of Data Stream Mining and Computat
 <h2>Ongoing Projects and Collaboration</h2>
 <div class="separator"></div>
 
-{% for project in site.projects %}
+{% assign runningprojects = site.projects | where: "status", "running" %}
+{% for project in runningprojects %}
 <article>
     <h3>{{ project.name }}</h3>
     {{ project.content | markdownify }}
     <a href="{{ project.external_url }}" class="external read_more" title="External project website">Read more</a>
+</article>
+{% endfor %}
+
+</article>
+
+<article>
+<h2>Past Projects</h2>
+<div class="separator"></div>
+
+{% assign finishedprojects = site.projects | where: "status", "finished" %}
+
+{% for project in finishedprojects %}
+<article>
+    <h3>{{ project.name }}</h3>
+    {{ project.content | markdownify }}
+    {% if project.external_url %}
+    <a href="{{ project.external_url }}" class="external read_more" title="External project website">Read more</a>
+    {% endif %}
 </article>
 {% endfor %}
 

@@ -4,7 +4,7 @@ name: HybriD - Real-Time Detection and Identification of Hybrid Disinformation C
 external_url: https://www.uni-muenster.de/Kowi/en/forschen/projekte/hybrid.html
 start_date: 01/11/2023
 end_date: 30/10/2024
-status: running
+status: finished
 contact: htrautmann
 maleo_staff_members: htrautmann, bgrimme
 order: 3
