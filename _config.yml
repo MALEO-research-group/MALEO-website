@@ -3,6 +3,10 @@ collections:
     # people: true # define collection as hash-map
     output: true # rendered page for every staff member
     sort_by: order
+  staff_members_past:
+    # people: true # define collection as hash-map
+    output: true # rendered page for every staff member
+    sort_by: order
   projects:
     people: true
 

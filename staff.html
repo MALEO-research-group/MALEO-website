@@ -11,7 +11,7 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
     <input type="search" id="staff_search" name="staff_search" value="Search by name">
 </div>
 
-<ul id="staff">
+<ul class="staff_list" id="staff">
 {% for staff_member in site.staff_members %}
     <li id="staff_member_{{ staff_member.identifier }}">
         <div>
@@ -43,3 +43,45 @@ title: Staff members of the Machine Learning and Optimisation (MALEO) Group at P
     </li>
 {% endfor %}
 </ul>
+
+
+<article>
+<h2>Past Members</h2>
+<div class="separator"></div>
+
+<p>We thank the following people for their contributions and wish all the best for the future!</p>
+
+<ul class="staff_list" id="staff_past">
+{% for staff_member in site.staff_members_past %}
+    <li id="staff_member_{{ staff_member.identifier }}">
+        <div>
+        <img src="/assets/images/{{ staff_member.identifier }}.jpg" width="15%" />
+        </div>
+        <div>
+        <!--a class="link_button" href="{{ staff_member.url }}" title="Open staff member page">{{ staff_member.academic_title }} {{ staff_member.name }}</a-->
+        {% if staff_member.academic_title == "M.Sc." or staff_member.academic_title == "B.Sc." %}
+        <h3>{{ staff_member.name }}, {{ staff_member.academic_title }}</h3>
+        {% else %}
+        <h3>{{ staff_member.academic_title }} {{ staff_member.name }}</h3>
+        {% endif %}
+        <p>
+            <b>Position:</b> {{ staff_member.position }}<br>
+            {% if staff_member.phone %}
+            <b>Phone:</b> {{ staff_member.phone }}<br>
+            {% endif %}
+            {% if staff_member.email %}
+            <b>E-mail:</b> <a href="mailto:{{ staff_member.email }}?subject=Contact%20via%20MALEO%20website" title="Write an email to {{ staff_member.short_name }}">{{ staff_member.email }}</a>
+            {% endif %}
+        </p>
+        {{ staff_member.content | markdownify }}
+        {% if staff_member.external_links %}
+            {% for ext_link in staff_member.external_links %}
+                <a href={{ ext_link.url }} class="external read_more">{{ ext_link.name }}</a>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </li>
+{% endfor %}
+</ul>
+
+</article>

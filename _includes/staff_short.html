@@ -1,6 +1,6 @@
 {% assign selected_ids = include.staff_ids | split: "," %}
 
-<ul id="staff">
+<ul class="staff_list">
 {% for staff_member in site.staff_members %}
     {% if selected_ids contains staff_member.identifier %}
     <li id="staff_member_{{ staff_member.identifier }}">
