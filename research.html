@@ -44,7 +44,9 @@ Furthermore, our group delves into the realms of Data Stream Mining and Computat
 <article>
     <h3>{{ project.name }}</h3>
     {{ project.content | markdownify }}
+    {% if project.external_url %}
     <a href="{{ project.external_url }}" class="external read_more" title="External project website">Read more</a>
+    {% endif %}
 </article>
 {% endfor %}
 
@@ -55,7 +57,6 @@ Furthermore, our group delves into the realms of Data Stream Mining and Computat
 <div class="separator"></div>
 
 {% assign finishedprojects = site.projects | where: "status", "finished" %}
-
 {% for project in finishedprojects %}
 <article>
     <h3>{{ project.name }}</h3>

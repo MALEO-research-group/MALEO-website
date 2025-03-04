@@ -7,7 +7,7 @@ end_date: 31/12/2026
 status: running
 contact: htrautmann
 maleo_staff_members: htrautmann, bgrimme
-order: 3
+order: 4
 ---
 Using rail mobility to contribute to highly automated, digitalised and sustainable mobility and to rethink interfaces with other modes of transport - this is the aim of the project "Automated rail transport as the basis for sustainable, networked mobility in rural areas (enableATO)", in which researchers from Paderborn University are involved. The project will be based at the RailCampus OWL in Minden. Minden is thus one of four locations within the DZM (German Centre for Future Mobility).
 
